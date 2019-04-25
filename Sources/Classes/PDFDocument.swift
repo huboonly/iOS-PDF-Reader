@@ -17,6 +17,8 @@ public struct PDFDocument {
     /// Name of the PDF file, used to display on navigation titles
     public let fileName: String
     
+
+    
     /// File url where this document resides
     let fileURL: URL?
     
@@ -104,7 +106,7 @@ public struct PDFDocument {
     }
     
     /// Image representations of all the document pages
-    func allPageImages(callback: ([UIImage]) -> Void) {
+    public func allPageImages(callback: ([UIImage]) -> Void) {
         var images = [UIImage]()
         var pagesCompleted = 0
         for pageNumber in 0..<pageCount {
